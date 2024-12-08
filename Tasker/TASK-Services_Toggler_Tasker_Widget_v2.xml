@@ -1,0 +1,265 @@
+<TaskerData sr="" dvi="1" tv="6.4.8-beta">
+	<Task sr="task272">
+		<cdate>1732860467332</cdate>
+		<edate>1733673769104</edate>
+		<id>272</id>
+		<nme>Toggles</nme>
+		<pri>100</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">Bluetooth: %BLUE</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>235</code>
+			<label>set %battery_saver_status
+0 = inactive
+1 = active</label>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">low_power</Str>
+			<Str sr="arg2" ve="3"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%battery_saver_status</Str>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bluetooth</Str>
+			<Str sr="arg1" ve="3">false</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>461</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Toggles</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Str sr="arg12" ve="3"/>
+			<Str sr="arg13" ve="3">{
+  "children": [
+    {
+      "checkedTrackColor": "#99CCFF",
+      "uncheckedTrackColor": "#FFCCCC",
+      "bold": true,
+      "checked": "%battery",
+      "checkedColor": "#00FF00",
+      "color": "#00FFFF",
+      "fontFamily": "Monospace",
+      "text": "Battery Saver ",
+      "textSize": "30",
+      "uncheckedColor": "#FF8000",
+      "command": "battery",
+      "padding": {
+        "top": 0,
+        "bottom": 10,
+        "start": 0,
+        "end": 0
+      },
+      "type": "Switch"
+    },
+    {
+      "checkedTrackColor": "#99CCFF",
+      "uncheckedTrackColor": "#FFCCCC",
+      "bold": true,
+      "checked": "%bluetooth",
+      "checkedColor": "#00FF00",
+      "color": "#00FFFF",
+      "fontFamily": "Monospace",
+      "text": "Bluetooth     ",
+      "textSize": "30",
+      "uncheckedColor": "#FF8000",
+      "command": "bluetooth",
+      "padding": {
+        "bottom": 10
+      },
+      "type": "Switch"
+    },
+    {
+      "checkedTrackColor": "#99CCFF",
+      "uncheckedTrackColor": "#FFCCCC",
+      "bold": true,
+      "checkedColor": "#00FF00",
+      "color": "#00FFFF",
+      "fontFamily": "Monospace",
+      "text": "Cell Data     ",
+      "textSize": "30",
+      "uncheckedColor": "#FF8000",
+      "command": "celldata",
+      "padding": {
+        "bottom": 10
+      },
+      "type": "Switch"
+    },
+    {
+      "checkedTrackColor": "#99CCFF",
+      "uncheckedTrackColor": "#FFCCCC",
+      "bold": true,
+      "checkedColor": "#00FF00",
+      "color": "#00FFFF",
+      "fontFamily": "Monospace",
+      "text": "Wifi          ",
+      "textSize": "30",
+      "uncheckedColor": "#FF8000",
+      "command": "wifi",
+      "type": "Switch"
+    },
+    {
+      "scrolling": false,
+      "children": [
+        {
+          "text": "G.Play Store",
+          "contentColor": "#0000FF",
+          "enabled": true,
+          "type": "Button"
+        }
+      ],
+      "horizontalAlignment": "Center",
+      "verticalAlignment": "Center",
+      "padding": {
+        "top": 10
+      },
+      "type": "Column"
+    }
+  ],
+  "horizontalAlignment": "Start",
+  "verticalAlignment": "Center",
+  "backgroundColor": "#660066",
+  "commandPrefix": "toggle",
+  "cornerRadius": 20,
+  "padding": 10,
+  "type": "Column",
+  "useMaterialYouColors": false
+}</Str>
+			<Int sr="arg14" val="1"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg16" val="1"/>
+			<Str sr="arg2" ve="3">Custom</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">✓battery_saver_status = %Battery_saver_status</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%battery_saver_status</lhs>
+					<op>0</op>
+					<rhs>1</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%battery</Str>
+			<Str sr="arg1" ve="3">true</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%battery</Str>
+			<Str sr="arg1" ve="3">false</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%BLUE</lhs>
+					<op>2</op>
+					<rhs>on</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bluetooth</Str>
+			<Str sr="arg1" ve="3">true</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<ProfileVariable sr="pv0">
+			<clearout>false</clearout>
+			<exportval></exportval>
+			<immutable>false</immutable>
+			<pvci>true</pvci>
+			<pvd></pvd>
+			<pvdn></pvdn>
+			<pvid>272</pvid>
+			<pvit>t</pvit>
+			<pvn>%battery_saver_status</pvn>
+			<pvt>b</pvt>
+			<strout>true</strout>
+		</ProfileVariable>
+	</Task>
+</TaskerData>
