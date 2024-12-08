@@ -1,0 +1,154 @@
+    Task: Toggler
+    Settings: Abort Existing Task
+    Variables: [ %battery_saver_status:has value ]
+    
+    A1: [X] Flash [
+         Text: Bluetooth: %BLUE
+         Continue Task Immediately: On
+         Dismiss On Click: On ]
+    
+    <set %battery_saver_status
+    0 = inactive
+    1 = active>
+    A2: Custom Setting [
+         Type: Global
+         Name: low_power
+         Read Setting To: %battery_saver_status ]
+    
+    A3: [X] Flash [
+         Text: ✓battery_saver_status = %Battery_saver_status
+         Continue Task Immediately: On
+         Dismiss On Click: On ]
+    
+    A4: If [ %battery_saver_status eq 1 ]
+    
+        A5: Variable Set [
+             Name: %battery
+             To: true
+             Structure Output (JSON, etc): On ]
+    
+    A6: Else
+    
+        A7: Variable Set [
+             Name: %battery
+             To: false
+             Structure Output (JSON, etc): On ]
+    
+    A8: End If
+    
+    A9: If [ %BLUE ~ on ]
+    
+        A10: Variable Set [
+              Name: %bluetooth
+              To: true
+              Structure Output (JSON, etc): On ]
+    
+    A11: Else
+    
+        A12: Variable Set [
+              Name: %bluetooth
+              To: false
+              Structure Output (JSON, etc): On ]
+    
+    A13: End If
+    
+    A14: Widget v2 [
+          Widget Name: Toggles
+          Layout: Custom
+          Custom Layout: {
+           "children": [
+             {
+               "checkedTrackColor": "#99CCFF",
+               "uncheckedTrackColor": "#FFCCCC",
+               "bold": true,
+               "checked": "%battery",
+               "checkedColor": "#00FF00",
+               "color": "#00FFFF",
+               "fontFamily": "Monospace",
+               "text": "Battery Saver ",
+               "textSize": "30",
+               "uncheckedColor": "#FF8000",
+               "command": "battery",
+               "padding": {
+                 "top": 0,
+                 "bottom": 10,
+                 "start": 0,
+                 "end": 0
+               },
+               "type": "Switch"
+             },
+             {
+               "checkedTrackColor": "#99CCFF",
+               "uncheckedTrackColor": "#FFCCCC",
+               "bold": true,
+               "checked": "%bluetooth",
+               "checkedColor": "#00FF00",
+               "color": "#00FFFF",
+               "fontFamily": "Monospace",
+               "text": "Bluetooth     ",
+               "textSize": "30",
+               "uncheckedColor": "#FF8000",
+               "command": "bluetooth",
+               "padding": {
+                 "bottom": 10
+               },
+               "type": "Switch"
+             },
+             {
+               "checkedTrackColor": "#99CCFF",
+               "uncheckedTrackColor": "#FFCCCC",
+               "bold": true,
+               "checkedColor": "#00FF00",
+               "color": "#00FFFF",
+               "fontFamily": "Monospace",
+               "text": "Cell Data     ",
+               "textSize": "30",
+               "uncheckedColor": "#FF8000",
+               "command": "celldata",
+               "padding": {
+                 "bottom": 10
+               },
+               "type": "Switch"
+             },
+             {
+               "checkedTrackColor": "#99CCFF",
+               "uncheckedTrackColor": "#FFCCCC",
+               "bold": true,
+               "checkedColor": "#00FF00",
+               "color": "#00FFFF",
+               "fontFamily": "Monospace",
+               "text": "Wifi          ",
+               "textSize": "30",
+               "uncheckedColor": "#FF8000",
+               "command": "wifi",
+               "type": "Switch"
+             },
+             {
+               "scrolling": false,
+               "children": [
+                 {
+                   "text": "G.Play Store",
+                   "contentColor": "#0000FF",
+                   "enabled": true,
+                   "type": "Button"
+                 }
+               ],
+               "horizontalAlignment": "Center",
+               "verticalAlignment": "Center",
+               "padding": {
+                 "top": 10
+               },
+               "type": "Column"
+             }
+           ],
+           "horizontalAlignment": "Start",
+           "verticalAlignment": "Center",
+           "backgroundColor": "#660066",
+           "commandPrefix": "toggle",
+           "cornerRadius": 20,
+           "padding": 10,
+           "type": "Column",
+           "useMaterialYouColors": false
+         }
+          Material You Colors: On
+          Ask To Add If Not Present: On ]
